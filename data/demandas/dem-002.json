@@ -1,0 +1,8 @@
+{
+  "id": "dem-002",
+  "titulo": "Controle de empréstimo de notebooks para alunos",
+  "setor": "Biblioteca",
+  "descricao": "A biblioteca vai começar a emprestar notebooks para alunos usarem no campus. O controle seria num caderno, mas queremos saber quem está com cada notebook, quando deve devolver e quais estão atrasados.",
+  "objetivo": "Registrar retirada e devolução dos notebooks com histórico e alerta de atraso.",
+  "prazo_desejado": null
+}

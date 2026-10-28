@@ -1,0 +1,39 @@
+{
+  "name": "rag-captacao-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Demo público da Captação de Projetos com RAG: ingestão, pgvector/Supabase Vector, agente de pré-esboço com saída em JSON Schema, triagem humana e observabilidade com OpenTelemetry.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "tsx src/server.ts",
+    "ingest": "tsx src/cli/ingest.ts",
+    "draft": "tsx src/cli/draft.ts",
+    "eval": "tsx src/cli/eval.ts",
+    "metricas:semana": "tsx src/cli/weekly-metrics.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "0.132.1",
+    "@electric-sql/pglite": "0.4.6",
+    "@opentelemetry/api": "1.9.0",
+    "@opentelemetry/core": "2.11.0",
+    "@opentelemetry/exporter-trace-otlp-http": "0.222.0",
+    "@opentelemetry/resources": "2.11.0",
+    "@opentelemetry/sdk-trace-base": "2.11.0",
+    "@opentelemetry/sdk-trace-node": "2.11.0",
+    "ajv": "8.17.1",
+    "pg": "8.16.3"
+  },
+  "devDependencies": {
+    "@types/node": "22.18.0",
+    "@types/pg": "8.15.5",
+    "tsx": "4.23.14",
+    "typescript": "5.9.3",
+    "vitest": "3.2.4"
+  }
+}

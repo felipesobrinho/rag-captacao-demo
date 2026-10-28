@@ -1,0 +1,8 @@
+{
+  "id": "dem-001",
+  "titulo": "Agendamento do auditório para eventos",
+  "setor": "Secretaria de Eventos",
+  "descricao": "Hoje o auditório é reservado por uma planilha compartilhada e por e-mail. Já aconteceram duas reservas para o mesmo horário e a equipe de apoio só fica sabendo da montagem em cima da hora. Dúvidas podem ser enviadas para eventos.demo@exemplo.com ou (31) 90000-0000.",
+  "objetivo": "Ter um agendamento do auditório com aprovação, sem conflito de horário e com aviso automático para a equipe de apoio.",
+  "prazo_desejado": "Próximo semestre"
+}

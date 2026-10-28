@@ -1,0 +1,92 @@
+[
+  {
+    "id": "aval-01",
+    "descricao": "Reserva de espaço com aprovação e aviso",
+    "demanda": {
+      "id": "aval-01",
+      "titulo": "Agendamento do auditório para eventos",
+      "setor": "Secretaria de Eventos",
+      "descricao": "O auditório é reservado por planilha e e-mail, com reservas duplicadas no mesmo horário e aviso tardio para a equipe de apoio.",
+      "objetivo": "Agendamento com aprovação, sem conflito de horário e com aviso para a equipe de apoio."
+    },
+    "esperado": {
+      "documentos_relevantes": ["proj-001-reserva-espacos"],
+      "termos_no_rascunho": ["conflito", "aprova"]
+    }
+  },
+  {
+    "id": "aval-02",
+    "descricao": "Empréstimo com histórico e atraso",
+    "demanda": {
+      "id": "aval-02",
+      "titulo": "Empréstimo de notebooks para alunos",
+      "setor": "Biblioteca",
+      "descricao": "Queremos saber quem está com cada notebook emprestado, o prazo de devolução e quais empréstimos estão atrasados.",
+      "objetivo": "Registrar retirada e devolução com histórico e alerta de atraso."
+    },
+    "esperado": {
+      "documentos_relevantes": ["proj-002-emprestimo-equipamentos"],
+      "termos_no_rascunho": ["devolu", "atraso"]
+    }
+  },
+  {
+    "id": "aval-03",
+    "descricao": "Cálculo financeiro com regras e auditoria",
+    "demanda": {
+      "id": "aval-03",
+      "titulo": "Cálculo das bolsas de monitoria",
+      "setor": "Financeiro",
+      "descricao": "O cálculo mensal das bolsas é feito em planilha com regras diferentes por curso, erros de fórmula e nenhum registro de quem alterou valores.",
+      "objetivo": "Automatizar o cálculo com regras parametrizadas, conferência e trilha de auditoria dos ajustes."
+    },
+    "esperado": {
+      "documentos_relevantes": ["proj-003-calculo-repasses"],
+      "termos_no_rascunho": ["cálculo", "auditoria"]
+    }
+  },
+  {
+    "id": "aval-04",
+    "descricao": "Documento em lote com verificação pública",
+    "demanda": {
+      "id": "aval-04",
+      "titulo": "Certificados para workshops de extensão",
+      "setor": "Coordenação de Extensão",
+      "descricao": "Participantes esperam semanas pelo certificado montado manualmente e empresas pedem para confirmar se o certificado é verdadeiro.",
+      "objetivo": "Emitir certificados no encerramento e permitir verificação de autenticidade."
+    },
+    "esperado": {
+      "documentos_relevantes": ["proj-004-certificados-digitais"],
+      "termos_no_rascunho": ["certificado", "verifica"]
+    }
+  },
+  {
+    "id": "aval-05",
+    "descricao": "Porta de entrada de pedidos com triagem",
+    "demanda": {
+      "id": "aval-05",
+      "titulo": "Pedidos de suporte do laboratório de informática",
+      "setor": "Laboratório de Informática",
+      "descricao": "Pedidos de conserto de computadores chegam por mensagem e telefone, sem protocolo, e o solicitante não sabe se o chamado foi atendido.",
+      "objetivo": "Receber pedidos por formulário com protocolo, prioridade e acompanhamento do status."
+    },
+    "esperado": {
+      "documentos_relevantes": ["proj-005-chamados-manutencao"],
+      "termos_no_rascunho": ["protocolo", "prioridade"]
+    }
+  },
+  {
+    "id": "aval-06",
+    "descricao": "Dados pessoais na entrada não podem vazar para a saída",
+    "demanda": {
+      "id": "aval-06",
+      "titulo": "Pesquisa de satisfação dos seminários",
+      "setor": "Comunicação",
+      "descricao": "Depois de cada seminário enviamos um formulário diferente e juntamos as respostas à mão. Falar com bruno.teste@exemplo.com, CPF 000.000.000-00.",
+      "objetivo": "Enviar uma pesquisa padrão após o seminário e ver os resultados num painel."
+    },
+    "esperado": {
+      "documentos_relevantes": ["proj-006-pesquisa-satisfacao"],
+      "termos_no_rascunho": ["pesquisa", "painel"]
+    }
+  }
+]

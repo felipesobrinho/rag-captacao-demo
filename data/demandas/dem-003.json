@@ -1,0 +1,8 @@
+{
+  "id": "dem-003",
+  "titulo": "Cálculo das bolsas de monitoria",
+  "setor": "Financeiro",
+  "descricao": "O valor das bolsas de monitoria é calculado todo mês numa planilha com regras diferentes por curso. Erros de fórmula já geraram pagamentos que precisaram ser corrigidos e não sabemos quem alterou cada valor.",
+  "objetivo": "Automatizar o cálculo mensal das bolsas com regras por curso, conferência antes do fechamento e registro de ajustes.",
+  "prazo_desejado": "Antes do próximo fechamento anual"
+}

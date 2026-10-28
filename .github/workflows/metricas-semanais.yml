@@ -1,0 +1,29 @@
+name: metricas-semanais
+
+# Exemplo do fluxo semanal: no ambiente real, o job lê os traces do coletor
+# OpenTelemetry e publica o relatório no canal da equipe (TEAMS_WEBHOOK_URL).
+on:
+  schedule:
+    - cron: "17 11 * * 1" # segunda-feira, 08:17 (BRT)
+  workflow_dispatch:
+
+jobs:
+  relatorio:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      # No demo não há traces persistidos entre execuções: gera algumas execuções offline antes do relatório
+      - run: |
+          for d in dem-001 dem-002 dem-003 dem-004; do npm run draft -- "$d" > /dev/null; done
+          npm run metricas:semana
+        env:
+          TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: metricas-semanais
+          path: reports/

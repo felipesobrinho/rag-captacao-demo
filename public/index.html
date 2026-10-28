@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Captação de Projetos — demo RAG</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">C</div>
+        <div>
+          <strong>Captação de Projetos</strong>
+          <span>demo com dados fictícios</span>
+        </div>
+      </div>
+      <div class="chips" id="estado"></div>
+    </header>
+
+    <nav class="layers" aria-label="Camadas da arquitetura">
+      <div class="layer" data-layer="1"><b>1</b> Entrada <small>formulário → lista</small></div>
+      <div class="layer" data-layer="2"><b>2</b> Pipeline de IA <small>gera rascunho</small></div>
+      <div class="layer" data-layer="3"><b>3</b> Decisão humana <small>triagem da equipe</small></div>
+      <div class="layer" data-layer="4"><b>4</b> Observabilidade <small>traces e métricas</small></div>
+    </nav>
+
+    <div class="tabs" role="tablist">
+      <button role="tab" class="tab active" data-tab="captacao" aria-selected="true">Captação</button>
+      <button role="tab" class="tab" data-tab="obs" aria-selected="false">Observabilidade</button>
+    </div>
+
+    <main id="captacao" class="view">
+      <aside class="panel list">
+        <div class="panel-head">
+          <h2>Demandas recebidas</h2>
+          <button class="btn ghost" id="nova">+ Nova demanda</button>
+        </div>
+        <ul id="demandas"></ul>
+      </aside>
+
+      <section class="detail" id="detalhe">
+        <div class="empty">Selecione uma demanda para começar.</div>
+      </section>
+    </main>
+
+    <main id="obs" class="view hidden">
+      <section class="kpis" id="kpis"></section>
+      <section class="obs-grid">
+        <div class="panel">
+          <div class="panel-head"><h2>Execuções do agente</h2><span class="muted" id="semana"></span></div>
+          <table class="runs">
+            <thead>
+              <tr><th>Quando</th><th>Demanda</th><th>Resultado</th><th>Latência</th><th>Tokens</th><th>Custo</th><th>Top sim.</th></tr>
+            </thead>
+            <tbody id="execucoes"></tbody>
+          </table>
+        </div>
+        <div class="panel">
+          <div class="panel-head"><h2>Trace</h2><span class="muted" id="trace-id"></span></div>
+          <div id="waterfall" class="waterfall"><div class="empty small">Selecione uma execução.</div></div>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="form-dialog">
+      <form method="dialog" id="form">
+        <h2>Nova demanda</h2>
+        <p class="muted">Simula a resposta do formulário que vira um item na lista de entrada.</p>
+        <label>Título<input name="titulo" required minlength="3" /></label>
+        <label>Setor<input name="setor" required minlength="3" /></label>
+        <label>Descrição do problema<textarea name="descricao" rows="4" required minlength="3"></textarea></label>
+        <label>Objetivo<textarea name="objetivo" rows="2" required minlength="3"></textarea></label>
+        <label>Prazo desejado (opcional)<input name="prazo_desejado" /></label>
+        <div class="actions">
+          <button value="cancel" class="btn ghost" formnovalidate>Cancelar</button>
+          <button value="ok" class="btn primary">Enviar</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
